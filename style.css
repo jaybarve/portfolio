@@ -397,5 +397,13 @@ span{
 
 
 
+@media(max-width:995px){
+  .home-img img {
+    width: 50vw;        /* reduced from 70vw → 50vw */
+    max-width: 220px;   /* cap the size */
+    margin-top: 2rem;
+  }
+}
+
 
 

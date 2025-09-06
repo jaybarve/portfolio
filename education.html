@@ -3,22 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Education - Jay Somning Barve</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        background-color: black;
+        color: white;
+    }
+
+    header{
+        margin-top: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 9%;
+        background-color: transparent;
+        filter: drop-shadow(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .logo{
+        font-size: 3rem;
+        color: #b74b4b;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+
+    .logo:hover{
+        transform: scale(1.1);
+    }
+
+    nav a{
+        font-size: 1.8rem;
+        color: white;
+        margin-left: 4rem;
+        font-weight: 500;
+        transition: 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active{
+        color: #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+    }
+
+    section{
+        min-height: 100vh;
+        padding: 8rem 9% 5rem;
+    }
+
+    /* === Education Section === */
+    .education h1 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        color: white;
+    }
+
+    .education h1 span {
+        color: #b74b4b;
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .edu-card {
+        background: #161616;
+        border: 2px solid #b74b4b;
+        border-radius: 1rem;
+        padding: 2rem;
+        font-size: 1.6rem;
+        transition: 0.3s ease;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease forwards;
+    }
+
+    .edu-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 25px #b74b4b;
+    }
+
+    .edu-card:nth-child(1) { animation-delay: 0.3s; }
+    .edu-card:nth-child(2) { animation-delay: 0.6s; }
+    .edu-card:nth-child(3) { animation-delay: 0.9s; }
+
+    .edu-card h2 {
+        font-size: 2.2rem;
+        color: #b74b4b;
+        margin-bottom: 0.5rem;
+    }
+
+    .edu-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .edu-card p {
+        font-size: 1.5rem;
+        color: #ccc;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media(max-width:995px){
+        nav{
+            position: absolute;
+            display: none;
+            top: 0;
+            right: 0;
+            width: 40%;
+            border-left: 3px solid #b74b4b;
+            border-bottom: 3px solid #b74b4b;
+            border-bottom-left-radius: 2rem;
+            padding: 1rem solid;
+            background-color: #161616;
+        }
+
+        nav.active{
+            display: block;
+        }
+
+        nav a{
+            display: block;
+            font-size: 2rem;
+            margin: 3rem 0;
+        }
+
+        nav a:hover,
+        nav a.active{
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-bottom: 0.5rem solid #b74b4b;
+        }
+    }
+  </style>
 </head>
 <body>
   <header>
-  <a href="index.html" class="logo">Jay Somning Barve</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="skills.html">Skills</a>
-    <a href="education.html" class="active">Education</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <a href="index.html" class="logo">Jay Somning Barve</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <section>
-    <h1>My Education</h1><p>Write about your school, college, degrees, and certifications.</p>
+  <section class="education">
+    <h1><span>My Education</span></h1>
+
+    <div class="timeline">
+      <div class="edu-card">
+        <h2>Bachelor of Computer Applications (BCA)</h2>
+        <h3>MIT ADT University — 2024 to Present</h3>
+        <p>
+          Currently pursuing BCA (2nd Year).  
+          Learning programming, web development, and enhancing skills in cybersecurity and cloud computing.
+        </p>
+      </div>
+
+      <div class="edu-card">
+        <h2>Higher Secondary (50% Science)</h2>
+        <h3>State Board — 2023 to 2024</h3>
+        <p>
+          Completed 12th in Science stream with focus on Mathematics and Computer Science.
+        </p>
+      </div>
+
+      <div class="edu-card">
+        <h2>Secondary (75.80%)</h2>
+        <h3>State Board — 2022</h3>
+        <p>
+          Completed 10th grade with strong interest in computers and problem-solving.
+        </p>
+      </div>
+    </div>
   </section>
 </body>
 </html>

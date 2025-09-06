@@ -3,22 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Jay Somning Barve</title>
   <link rel="stylesheet" href="style.css">
-  <title>Skills - SKILLS</title>
+  <style>
+    /* === Global Reset === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* === Header === */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: #bbb;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #4cafef;
+    }
+
+    /* === Section === */
+    section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section h1 {
+      font-size: 28px;
+      color: #222;
+      margin-bottom: 15px;
+      border-left: 5px solid #4cafef;
+      padding-left: 10px;
+    }
+
+    section p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    /* === Skills List === */
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .skill {
+      background: #f9fbff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      font-weight: 500;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      border-color: #4cafef;
+    }
+  </style>
 </head>
 <body>
   <header>
-  <a href="index.html" class="logo">Jay Somning Barve</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="skills.html" class="active">Skills</a>
-    <a href="education.html">Education</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <a href="index.html" class="logo">Jay Somning Barve</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
   <section>
-    <h1>My Skills</h1><p>List your technical skills here: HTML, CSS, JavaScript, Cybersecurity, Cloud Computing, etc.</p>
+    <h1>My Skills</h1>
+    <p>
+      My name is <strong>Jay Somning Barve</strong>, a second-year BCA student at 
+      <strong>MIT ADT University</strong>.  
+      I have hands-on experience in <b>beta testing</b> and <b>bug bounty</b>, and I am 
+      currently enhancing my skills in <b>cybersecurity</b> and <b>cloud computing</b>.  
+      I am passionate about exploring <b>system security</b>, <b>testing environments</b>, and 
+      contributing to secure and efficient digital solutions.
+    </p>
+
+    <div class="skills-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Cybersecurity</div>
+      <div class="skill">Cloud Computing</div>
+      <div class="skill">Bug Bounty</div>
+      <div class="skill">Beta Testing</div>
+      <div class="skill">System Security</div>
+    </div>
   </section>
 </body>
 </html>

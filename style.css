@@ -380,18 +380,22 @@ span{
   }
 
   .menu-toggle {
-    display: block;
-    font-size: 4rem;
-    color: #b74b4b;
-    cursor: pointer;
-  }
+  display: none;          /* hidden on desktop */
+  font-size: 3rem;        /* default size if needed */
+  color: #b74b4b;
+  cursor: pointer;
+  margin-right: 1rem;
+}
 
-  nav a {
-    font-size: 2rem;
-    margin: 0;
-    text-align: center;
+/* Mobile only */
+@media (max-width: 995px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2.6rem;    /* medium size on mobile */
   }
 }
+
+
 
 
 

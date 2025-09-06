@@ -360,17 +360,19 @@ span{
 /* Mobile nav styles */
 @media (max-width: 995px) {
   nav {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 70%;
+    position: fixed;          /* Fix to screen */
+    top: 70px;                /* Below header */
+    left: 0;                  /* Start from left */
+    width: 100%;              /* Full width */
     background: #161616;
-    border: 2px solid #b74b4b;
-    border-radius: 1rem;
-    padding: 2rem;
+    border-top: 2px solid #b74b4b;
+    border-bottom: 2px solid #b74b4b;
+    padding: 2rem 0;
     display: none;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 2rem;
+    z-index: 200;             /* Stay above content */
   }
 
   nav.active {
@@ -379,11 +381,14 @@ span{
 
   .menu-toggle {
     display: block;
+    font-size: 4rem;
+    color: #b74b4b;
+    cursor: pointer;
   }
 
   nav a {
-    font-size: 1.6rem;
-    text-align: center;
+    font-size: 2rem;
     margin: 0;
+    text-align: center;
   }
 }

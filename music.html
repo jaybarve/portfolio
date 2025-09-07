@@ -2,27 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Music and Video Page</title>
+  <title>Music and Photo Page</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #000;
-      overflow: hidden;
-    }
-    video {
-      width: 100%;
+      background: #000; /* Black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
-      object-fit: cover;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .center-content img {
+      width: 200px; /* Adjust size */
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .center-content h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    .center-content p {
+      font-size: 1.2em;
+      margin: 5px 0 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hidden background music -->
+  <!-- Hidden Background Music -->
   <audio autoplay loop hidden>
     <source src="music.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- Center Content -->
+  <div class="center-content">
+    <img src="photo1.jpg" alt="My Photo">
+    <h1>Thank you </h1>
+    <p>Thank you fot Hiring me.</p>
+  </div>
 
 </body>
 </html>
